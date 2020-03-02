@@ -12,6 +12,8 @@ services:
 
 env:
   global:
+    - DJANGO_MYSQL_HOST="127.0.0.1"
+    - DJANGO_MYSQL_USER="travis"
     - DJANGO_SETTINGS_MODULE="travis_ci.settings"
 
 branches:
