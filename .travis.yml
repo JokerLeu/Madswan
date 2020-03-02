@@ -1,3 +1,5 @@
+dist: Bionic
+
 language: python
 
 sudo: required
