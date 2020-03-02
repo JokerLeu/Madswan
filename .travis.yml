@@ -1,11 +1,28 @@
 language: python
+
+sudo: required
+
 python:
   - "3.7"
+
+services:
+  - mysql
+
+env:
+  global:
+    - DJANGO_SETTINGS_MODULE="travis_ci.settings"
+
+branches:
+  only:
+    - master
 
 install:
   - pip install -r requirements.txt
 
-script:
+before_script:
+  - mysql -e 'CREATE DATABASE `madswan` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;'
   - python manage.py makemigrations
   - python manage.py migrate
+
+script:
   - python manage.py check
