@@ -1,3 +1,4 @@
+[![Build Status](https://www.travis-ci.org/JokerLeu/Madswan.svg?branch=master)](https://www.travis-ci.org/JokerLeu/Madswan)
 # 说明
 ## 依赖文件
 ```shell script
